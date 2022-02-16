@@ -130,4 +130,6 @@ dmypy.json
 
 #Data Files
 .csv
+/home/mremington/Documents/uumarrty_post_sim/uumarrty_post_sim_analysis/per_cycle_analysis/data/*.csv
+/home/mremington/Documents/uumarrty_post_sim/uumarrty_post_sim_analysis/per_cycle_analysis/old_data/*.csv
 
