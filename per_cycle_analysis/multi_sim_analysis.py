@@ -8,11 +8,13 @@ import single_sim_analysis as ipc
 
 
 class Experiment_Per_Cycle_Analysis(object):
-    def __init__(self,exp_name, per_cycle_data_file,parameter_file,output_file_csv):
+    def __init__(self,exp_name, per_cycle_data_file,parameter_file,output_file_csv,nash_inf_count_sensitivity=5,nash_inf_mag_sensitivity=0.05):
         self.per_cycle = pd.read_csv(per_cycle_data_file,header = 0, index_col=None)
         self.parameters = pd.read_csv(parameter_file,header = 0, index_col=None)
         self.output_file_csv = output_file_csv
         self.exp_name = exp_name
+        self.nash_inf_count_sensitivity=nash_inf_count_sensitivity
+        self.nash_inf_mag_sensitivity=nash_inf_mag_sensitivity
         self.per_gen_data_format()
         header = ['exp_name',
                   'sim_id',
@@ -20,7 +22,7 @@ class Experiment_Per_Cycle_Analysis(object):
                   'org',
                   'count_str_flip', 
                   'mean_strategy_flip_time', 'std_strategy_flip_time', 'var_strategy_flip_time',
-                  'mean_magnitude_of_strategy_flip', 'std_magnitude_of_strategy_flip', 'var_magnitude_of_strategy_flip']
+                  'mean_magnitude_of_strategy_flip', 'std_magnitude_of_strategy_flip', 'var_magnitude_of_strategy_flip','nash_val']
         if(os.path.exists(self.output_file_csv) and os.path.isfile(self.output_file_csv)):
             pass
         else:
@@ -57,6 +59,13 @@ class Experiment_Per_Cycle_Analysis(object):
 
         self.by_gen_data = self.per_cycle[self.per_cycle['by_gen_filter']==1]
 
+    def nash(self,pc_count, pc_mag_value, sensitivity_points, sensitivity_magnitude):
+        if pc_count <= sensitivity_points and pc_mag_value <= sensitivity_magnitude:
+            nash=1
+        else:
+            nash=0
+        return nash
+
     def run_classifacation_algorithm(self,sim):
         step_size=1
         sensitivity=0.01
@@ -89,10 +98,14 @@ class Experiment_Per_Cycle_Analysis(object):
             mean_magnitude_of_strategy_flip = magnitude_data.mean()
             std_magnitude_of_strategy_flip = magnitude_data.std()
             var_magnitude_of_strategy_flip = magnitude_data.var()
+        nash_val = self.nash(pc_count=number_of_inf_points,
+                         pc_mag_value=mean_magnitude_of_strategy_flip, 
+                         sensitivity_points=self.nash_inf_count_sensitivity, 
+                         sensitivity_magnitude=self.nash_inf_mag_sensitivity)
         sim_id = sim['sim_id'].max()
         org = sim['org'].max()
         exp = sim['experiment'].max()
-        return [self.exp_name,sim_id,exp,org,number_of_inf_points, mean_strategy_flip_time, std_strategy_flip_time, var_strategy_flip_time, mean_magnitude_of_strategy_flip,std_magnitude_of_strategy_flip,var_magnitude_of_strategy_flip]
+        return [self.exp_name,sim_id,exp,org,number_of_inf_points, mean_strategy_flip_time, std_strategy_flip_time, var_strategy_flip_time, mean_magnitude_of_strategy_flip,std_magnitude_of_strategy_flip,var_magnitude_of_strategy_flip,nash_val]
 
 
     def loop_through_sims(self):
@@ -116,7 +129,7 @@ def main():
         for i in range(1,7):
             file_path_parameter = '/home/mremington/Documents/uumarrty_exps/{}/exp{}/Data/parameters.csv'.format(label,i)
             file_path_per_cycle = '/home/mremington/Documents/uumarrty_exps/{}/exp{}/Data/per_cycle.csv'.format(label,i)
-            output_csv_file_path = '/home/mremington/Documents/krattle_analysis/krattle_analysis/per_cycle_analysis/data/{}_point_classifacation.csv'.format(label)
+            output_csv_file_path = '/home/mremington/Documents/uumarrty_post_sim/uumarrty_post_sim_analysis/per_cycle_analysis/nash_data/{}_point_classifacation.csv'.format(label)
             epca = Experiment_Per_Cycle_Analysis(exp_name=label, per_cycle_data_file=file_path_per_cycle,parameter_file=file_path_parameter,output_file_csv=output_csv_file_path)
             epca.loop_through_sims()
 
