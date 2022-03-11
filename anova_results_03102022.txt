@@ -1,0 +1,198 @@
+Anova Results for Experiment: owl_exp_pure
+__________________________________________
+
+
+Krat
+F Value: 12692.652069430016, P Value 0.0
+
+Snake
+F Value: 13810.880519605618, P Value 0.0
+
+Tukey Results for Experiment: owl_exp_pure
+     Multiple Comparison of Means - Tukey HSD, FWER=0.05     
+=============================================================
+   group1      group2   meandiff p-adj   lower  upper  reject
+-------------------------------------------------------------
+experiment1 experiment2   0.0705  0.001   0.062  0.079   True
+experiment1 experiment3   0.1659  0.001  0.1575 0.1744   True
+experiment1 experiment4   0.4926  0.001  0.4842 0.5011   True
+experiment1 experiment5   0.4987  0.001  0.4902 0.5071   True
+experiment1 experiment6   0.4998  0.001  0.4913 0.5083   True
+experiment2 experiment3   0.0954  0.001   0.087 0.1039   True
+experiment2 experiment4   0.4221  0.001  0.4137 0.4306   True
+experiment2 experiment5   0.4282  0.001  0.4197 0.4366   True
+experiment2 experiment6   0.4293  0.001  0.4208 0.4378   True
+experiment3 experiment4   0.3267  0.001  0.3182 0.3351   True
+experiment3 experiment5   0.3327  0.001  0.3243 0.3412   True
+experiment3 experiment6   0.3339  0.001  0.3254 0.3423   True
+experiment4 experiment5   0.0061 0.3163 -0.0024 0.0145  False
+experiment4 experiment6   0.0072 0.1493 -0.0013 0.0156  False
+experiment5 experiment6   0.0011    0.9 -0.0073 0.0096  False
+-------------------------------------------------------------
+
+
+Anova Results for Experiment: owl_exp_mixed
+___________________________________________
+
+
+Krat
+F Value: 3417.202852639963, P Value 4.802912537868856e-258
+
+Snake
+F Value: 7660.704853416159, P Value 5.632816463041613e-309
+
+Tukey Results for Experiment: owl_exp_mixed
+    Multiple Comparison of Means - Tukey HSD, FWER=0.05    
+===========================================================
+   group1      group2   meandiff p-adj lower  upper  reject
+-----------------------------------------------------------
+experiment1 experiment2   0.0457 0.001 0.0326 0.0589   True
+experiment1 experiment3   0.1816 0.001 0.1685 0.1948   True
+experiment1 experiment4   0.3704 0.001 0.3572 0.3835   True
+experiment1 experiment5   0.4096 0.001 0.3964 0.4228   True
+experiment1 experiment6   0.4284 0.001 0.4153 0.4416   True
+experiment2 experiment3   0.1359 0.001 0.1227  0.149   True
+experiment2 experiment4   0.3246 0.001 0.3115 0.3378   True
+experiment2 experiment5   0.3639 0.001 0.3507  0.377   True
+experiment2 experiment6   0.3827 0.001 0.3695 0.3959   True
+experiment3 experiment4   0.1887 0.001 0.1756 0.2019   True
+experiment3 experiment5    0.228 0.001 0.2148 0.2411   True
+experiment3 experiment6   0.2468 0.001 0.2337   0.26   True
+experiment4 experiment5   0.0392 0.001 0.0261 0.0524   True
+experiment4 experiment6   0.0581 0.001 0.0449 0.0712   True
+experiment5 experiment6   0.0188 0.001 0.0057  0.032   True
+-----------------------------------------------------------
+
+
+Anova Results for Experiment: strike_exp_pure
+_____________________________________________
+
+
+Krat
+F Value: 862.6899175015255, P Value 2.561834218917149e-173
+
+Snake
+F Value: 78.75350059602046, P Value 3.280715862612611e-52
+
+Tukey Results for Experiment: strike_exp_pure
+     Multiple Comparison of Means - Tukey HSD, FWER=0.05     
+=============================================================
+   group1      group2   meandiff p-adj  lower   upper  reject
+-------------------------------------------------------------
+experiment1 experiment2  -0.0387 0.001 -0.0487 -0.0287   True
+experiment1 experiment3  -0.0702 0.001 -0.0802 -0.0602   True
+experiment1 experiment4  -0.1124 0.001 -0.1224 -0.1024   True
+experiment1 experiment5  -0.1614 0.001 -0.1714 -0.1514   True
+experiment1 experiment6  -0.1885 0.001 -0.1985 -0.1785   True
+experiment2 experiment3  -0.0315 0.001 -0.0416 -0.0215   True
+experiment2 experiment4  -0.0737 0.001 -0.0838 -0.0637   True
+experiment2 experiment5  -0.1228 0.001 -0.1328 -0.1128   True
+experiment2 experiment6  -0.1499 0.001 -0.1599 -0.1399   True
+experiment3 experiment4  -0.0422 0.001 -0.0522 -0.0322   True
+experiment3 experiment5  -0.0912 0.001 -0.1012 -0.0812   True
+experiment3 experiment6  -0.1183 0.001 -0.1283 -0.1083   True
+experiment4 experiment5   -0.049 0.001  -0.059  -0.039   True
+experiment4 experiment6  -0.0761 0.001 -0.0861 -0.0661   True
+experiment5 experiment6  -0.0271 0.001 -0.0371 -0.0171   True
+-------------------------------------------------------------
+
+
+Anova Results for Experiment: strike_exp_mixed
+______________________________________________
+
+
+Krat
+F Value: 2342.4477253359905, P Value 1.9545512773566557e-234
+
+Snake
+F Value: 1823.3257930812297, P Value 6.877579251642539e-219
+
+Tukey Results for Experiment: strike_exp_mixed
+     Multiple Comparison of Means - Tukey HSD, FWER=0.05     
+=============================================================
+   group1      group2   meandiff p-adj  lower   upper  reject
+-------------------------------------------------------------
+experiment1 experiment2  -0.0746 0.001 -0.0855 -0.0637   True
+experiment1 experiment3  -0.1508 0.001 -0.1617 -0.1399   True
+experiment1 experiment4  -0.2255 0.001 -0.2364 -0.2147   True
+experiment1 experiment5  -0.2877 0.001 -0.2985 -0.2768   True
+experiment1 experiment6  -0.3414 0.001 -0.3523 -0.3305   True
+experiment2 experiment3  -0.0762 0.001 -0.0871 -0.0653   True
+experiment2 experiment4  -0.1509 0.001 -0.1618 -0.1401   True
+experiment2 experiment5  -0.2131 0.001  -0.224 -0.2022   True
+experiment2 experiment6  -0.2668 0.001 -0.2777 -0.2559   True
+experiment3 experiment4  -0.0747 0.001 -0.0856 -0.0639   True
+experiment3 experiment5  -0.1369 0.001 -0.1478  -0.126   True
+experiment3 experiment6  -0.1906 0.001 -0.2015 -0.1797   True
+experiment4 experiment5  -0.0621 0.001  -0.073 -0.0513   True
+experiment4 experiment6  -0.1159 0.001 -0.1267  -0.105   True
+experiment5 experiment6  -0.0537 0.001 -0.0646 -0.0429   True
+-------------------------------------------------------------
+
+
+Anova Results for Experiment: energy_gain_pure
+______________________________________________
+
+
+Krat
+F Value: 1787.5299657467137, P Value 1.1558786786707292e-217
+
+Snake
+F Value: 3061.7655537697838, P Value 3.6873732390602236e-251
+
+Tukey Results for Experiment: energy_gain_pure
+     Multiple Comparison of Means - Tukey HSD, FWER=0.05     
+=============================================================
+   group1      group2   meandiff p-adj  lower   upper  reject
+-------------------------------------------------------------
+experiment1 experiment2   0.0049   0.9 -0.0183  0.0281  False
+experiment1 experiment3   0.0047   0.9 -0.0184  0.0279  False
+experiment1 experiment4  -0.4384 0.001 -0.4616 -0.4152   True
+experiment1 experiment5  -0.4379 0.001 -0.4611 -0.4147   True
+experiment1 experiment6  -0.4377 0.001 -0.4609 -0.4145   True
+experiment2 experiment3  -0.0002   0.9 -0.0234   0.023  False
+experiment2 experiment4  -0.4433 0.001 -0.4665 -0.4201   True
+experiment2 experiment5  -0.4428 0.001  -0.466 -0.4196   True
+experiment2 experiment6  -0.4426 0.001 -0.4658 -0.4195   True
+experiment3 experiment4  -0.4432 0.001 -0.4663   -0.42   True
+experiment3 experiment5  -0.4426 0.001 -0.4658 -0.4195   True
+experiment3 experiment6  -0.4425 0.001 -0.4657 -0.4193   True
+experiment4 experiment5   0.0005   0.9 -0.0227  0.0237  False
+experiment4 experiment6   0.0007   0.9 -0.0225  0.0239  False
+experiment5 experiment6   0.0002   0.9  -0.023  0.0234  False
+-------------------------------------------------------------
+
+
+Anova Results for Experiment: energy_gain_mixed
+_______________________________________________
+
+
+Krat
+F Value: 2067.1849568647317, P Value 1.1529955832850728e-226
+
+Snake
+F Value: 18019.67774128264, P Value 0.0
+
+Tukey Results for Experiment: energy_gain_mixed
+     Multiple Comparison of Means - Tukey HSD, FWER=0.05      
+==============================================================
+   group1      group2   meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------
+experiment1 experiment2  -0.0055 0.7102  -0.017  0.0059  False
+experiment1 experiment3  -0.1334  0.001 -0.1449  -0.122   True
+experiment1 experiment4  -0.2299  0.001 -0.2414 -0.2185   True
+experiment1 experiment5  -0.2682  0.001 -0.2797 -0.2568   True
+experiment1 experiment6  -0.2859  0.001 -0.2973 -0.2744   True
+experiment2 experiment3  -0.1279  0.001 -0.1394 -0.1164   True
+experiment2 experiment4  -0.2244  0.001 -0.2359  -0.213   True
+experiment2 experiment5  -0.2627  0.001 -0.2742 -0.2513   True
+experiment2 experiment6  -0.2804  0.001 -0.2918 -0.2689   True
+experiment3 experiment4  -0.0965  0.001  -0.108 -0.0851   True
+experiment3 experiment5  -0.1348  0.001 -0.1463 -0.1234   True
+experiment3 experiment6  -0.1525  0.001 -0.1639  -0.141   True
+experiment4 experiment5  -0.0383  0.001 -0.0498 -0.0268   True
+experiment4 experiment6   -0.056  0.001 -0.0674 -0.0445   True
+experiment5 experiment6  -0.0176  0.001 -0.0291 -0.0062   True
+--------------------------------------------------------------
+
+
