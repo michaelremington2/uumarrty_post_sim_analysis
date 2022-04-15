@@ -93,7 +93,7 @@ def animate(i):
     plt.ylim(-0.05, 1.05)
     plt.xlabel('Generation')
     plt.ylabel('Microhabitat Preference')
-    plt.title('Exp: {}'.format(str(i+1)))
+    plt.title('Experimental Group: {}'.format(str(i+1)))
     plt.legend(handles=legend_elements, loc='upper right')
 
         
